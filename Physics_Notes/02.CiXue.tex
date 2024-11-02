@@ -1,0 +1,484 @@
+\section{磁感应强度的定义}
+将试验电荷 $q$ 以恒定速率 $v$ 引入磁场，检测其在通过定点 $P$时所受的磁力。
+实验结果可以归结如下:
+\begin{itemize}
+    \item 当试验电荷 $q$ 以恒定速率 $v$ 通过P点时，基本都会受到磁力，但有一个特定方向除外；
+    \item 所受磁力方向始终与 $v$ 垂直；
+    \item 当电荷运动方向与上述特定方向垂直时，电荷所受到的磁力最大，且 $ F_{\max} \propto qv $
+\end{itemize}
+
+于是，我们依据上述实验事实定义描述磁场性质的磁感应强度矢量 $B$ ，规定它的量值为
+$B=\mathrm{d}\displaystyle \frac{F_{m}}{qv}$。
+其方向与实验电荷所受磁力为0时的 $v$的方向相同，也就是将小磁针放在该点时N极所指向的方向。
+或者，根据正电荷受最大磁力 $F_{m}$ 和 $v$ 的方向，按右螺旋法则，由矢积 $F_{m}\times v$ 的方向来确定 $B$ 的方向。
+
+此时，磁场作用于运动电荷 $q$ 的磁力大小可以表示成 $F=qvB\sin \theta$，
+写作矢量式即为 $\boldsymbol{F}=q\boldsymbol{v}\times \boldsymbol{B}$
+
+为了纪念洛伦兹对发展和阐明电场和磁场概念所作的伟大贡献，人们将磁场对运动电荷的作用力称为洛伦兹力。
+洛伦兹力垂直于电荷的运动方向，因而不做功，它只能改变电荷的速度方向，而不能改变其速度大小。
+
+在国际单位制中，磁感应强度 $B$ 的单位为牛/安·米，称为特[斯拉]（T）。
+
+\section{毕奥-萨法尔定律}
+经法国科学家 J.B.Biot 和 F.Savart 的实验方法研究了长直载流导线在周围空间产生的磁场，总结出空间某点处的磁感应强度 $B$与导线中的
+电流强度 $I$ 成正比，与该点到导线的距离 $r$ 的平方成反比的关系。其后，经由P.S.Laplace的分析，提出了电流源产生的磁场的
+磁感应强度的数学表达式：
+
+\begin{equation} 
+    \label{biot-savart-vec}
+    \mathrm{d} \boldsymbol{B} = \frac{\mu_0}{4\pi}\frac{I\mathrm{d} \boldsymbol{l}\times \boldsymbol{r_0}}{r^2}
+\end{equation}
+
+可以将 \autoref{biot-savart-vec} 简化为标量积分：
+\begin{equation}
+  \label{biot-savart-norm}
+  B=\frac{\mu_0}{4\pi}\frac{I\mathrm{d} l\sin\theta}{r^2}
+\end{equation}
+
+\subsection{毕奥-萨法尔定律的应用}
+\subsubsection{(1) 长直载流导线的磁场}
+$$
+  B=\int_{L}\mathrm{d} B=\int_{L}\frac{\mu_0}{4\pi}\frac{I\mathrm{d} l\sin\theta}{r^2}
+$$
+$$
+r=\frac{a}{\sin(\pi-\theta)}=\frac{a}{\sin\theta},\quad l=\frac{a}{\tan(\pi-\theta)}=-\frac{a}{\tan\theta}
+$$
+$$
+\mathrm{d} l=\frac{a}{\sin^2\theta}\mathrm{d} \theta
+$$
+把上述关系代入前式得：
+\begin{equation}
+  \label{Biot-Savart-law-czzldx}
+  B=\frac{\mu_0I}{4\pi a}\int_{\theta_1}^{\theta_2}\sin\theta\mathrm{d} \theta
+  =\frac{\mu_0I}{4\pi a}(\cos \theta_1-\cos \theta_2)
+\end{equation}
+当导线的长度 $L \gg a$，即可将导线视为无限长时，用 $\theta_1=0\quad\theta_2=\pi$ 代入 \autoref{Biot-Savart-law-czzldx}，
+于是有
+\begin{equation}
+  \label{Biot-Savart-law-czzldx-infty}
+  B=\frac{\mu_0I}{2\pi a}
+\end{equation}
+
+\subsubsection{(2) 载流圆线圈的磁场}
+$$
+B=\int \mathrm{d} B_{||}=\int \mathrm{d} B \cos \alpha
+$$
+而 $\mathrm{d}splaystyle \cos \alpha =\frac{R}{r}=\frac{R}{(R^2+x^2)^{3/2}}\mathrm{d} l$，代入上式得：
+\begin{equation}
+  \label{Biot-Savart-law-zlyxq}
+  \begin{aligned}
+  B &= \int \mathrm{d} B_{||}=\int^{2\pi R}_{0}\frac{\mu_0IR}{4\pi(R^2+x^{2})^{3/2}}\mathrm{d} l \\
+  &=\frac{\mu_0IR^2}{2(R^{2}+x^{2})^{3/2}}
+  \end{aligned}
+\end{equation}
+
+下面讨论两种特殊位置的磁感应强度 $B$:
+
+(1) 在圆电流的圆心处
+\begin{equation}
+  \label{Biot-Savart-law-zlyxq-heart}
+  B(0)=\frac{\mu_0 NI}{2R}
+\end{equation}
+
+(2) 在远离圆线圈各点处（ $x\gg R$ ）
+\begin{equation}
+  \label{Biot-Savart-law-zlyxq-infty}
+  B=\frac{\mu_0IR^{2}}{2x^{3}}=\frac{\mu_0IS}{2\pi x^{3}}
+\end{equation}
+  
+式中， $S=\pi R^{2}$ 是圆线圈的面积。
+
+(3) 载流线圈的磁矩 磁偶极子
+
+我们曾以电矩 $p_{e}=ql$ 来描述电偶极子的电性质，同样，我们引入磁矩
+$p_{m}=NISe_{n}$ 来描述载流线圈的磁性质。其中 $e_{n}$ 为线圈正平面法线方向上的单位矢量，
+其方向与电流环绕方向成右手螺旋关系。
+
+引入磁矩的概念后，\autoref{Biot-Savart-law-zlyxq-infty} 就可以使用矢量式表示为
+\begin{equation}
+  \label{Biot-Savart-law-zlyxq-cj}
+  \boldsymbol{B}=\frac{\mu_0}{2\pi}\frac{\boldsymbol{p_{m}}}{x^{3}}
+\end{equation}
+
+\subsubsection{(3) 载流直螺线管的磁场}
+
+我们由 \autoref{Biot-Savart-law-zlyxq} 可知载流圆线圈的磁场为：
+$$
+B=\frac{\mu_0IR^2}{2r^{3}}=\frac{\mu_0IR^2}{2(R^{2}+x^{2})^{3/2}}
+$$
+
+而在螺线管中，我们可以知道 $I=nI_0\mathrm{d} l$，于是我们有：
+$$
+B=\frac{\mu_0}{2}\frac{R^2I_0n \mathrm{d} l}{(R^{2}+x^{2})^{3/2}}
+$$
+
+为了便于积分，我们引入了变量 $\beta$，它是自P点到dl所引的矢量与螺线管轴线之间的夹角，易知
+$$
+l=\frac{R}{\tan\beta}\quad\mathrm{d} l =-\frac{R}{\sin ^{2}\beta}\mathrm{d} \beta
+\quad r^{2}=R^{2}+l^{2}=\frac{R^{2}}{\sin ^{2}\beta}
+$$
+
+代入上式得：
+$$
+\mathrm{d}B=\frac{\mu_0}{2}\frac{R^{2}In\mathrm{d}l}{(R^{2}+x^{2})^{3/2}}
+=-\frac{\mu_0}{2} nI\sin \beta \mathrm{d}\beta
+$$
+
+进而，我们有：
+\begin{equation}
+  \label{Biot-Savart-law-zlzlxg}
+  B=\int\mathrm{d}B=-\frac{\mu_0}{2}nI\int^{\beta_2}_{\beta_1}\sin \beta \mathrm{d} \beta=\frac{\mu_0}{2}NI(\cos \beta_2-\cos \beta_1)
+\end{equation}
+
+下面我们讨论两种特殊情况：
+
+(a) 螺线管为无限长($L\gg R$)
+
+此时我们有 $\beta_1 \to \pi\quad \beta_2 \to 0$，于是我们有
+\begin{equation}
+  \label{Biot-Savart-law-zlzlxg-infty}
+  B=\mu_0nI
+\end{equation}
+
+(b) 螺线管为半无限长（位于轴线端点）
+
+此时我们有 $\displaystyle \beta_1 \to \frac{\pi}{2}\quad \beta_2 \to 0$，于是我们有
+
+\begin{equation}
+  \label{Biot-Savart-law-zlzlxg-half-infty}
+  B=\frac{1}{2}\mu_0nI
+\end{equation}
+
+\subsubsection{(4) 无限长均匀载流薄铜片的磁场}
+
+将宽度为 $a$的无限长薄铜片看作无限多宽度为 $\mathrm{d}x$的直导线组成，设铜片通过的电流为 $I$，
+则每根直导线上的电流为 $\displaystyle \frac{I\mathrm{d}x}{a}$。根据 \autoref{Biot-Savart-law-czzldx-infty},我们可以知道
+任一细导线在铜片中心线正上方的P点处产生的磁感应强度大小为：
+$$
+\mathrm{d}B=\frac{\mu_0}{2\pi}\frac{\mathrm{d}I}{r}
+=\frac{\mu_0}{2\pi}\frac{I(\displaystyle \frac{\mathrm{d}x}{a})}{\displaystyle \frac{y}{\cos \theta}}
+=\frac{\mu_0}{2\pi}\frac{I\cos \theta \mathrm{d}x}{ay}
+$$
+
+由对称性可知，垂直分量相互抵消，只剩水平分量，则
+$$
+B=\int \mathrm{d}B_{x}=\int \mathrm{d} B \cos \theta=\int \frac{\mu_0I \cos \theta \mathrm{d}x}{2\pi ay}\cos \theta
+=\frac{\mu_0I}{2\pi a y}\int \cos^{2}\theta \mathrm{d}x
+$$
+
+因为 $\displaystyle x=y\tan \theta ,\mathrm{d}x=\frac{y}{\cos^{2}\theta}\mathrm{d}\theta$，积分上下限为 $\displaystyle \pm \alpha,\ \alpha=\arctan \frac{a}{2y}$，
+代入上式得：
+$$
+B=\frac{\mu_0I}{2\pi a y}\int \frac{y\cos ^{2}\theta \mathrm{d}\theta}{\cos ^{2} \theta}
+=\frac{\mu_0I}{2\pi a}\int^{\alpha}_{-\alpha}\mathrm{d}\theta=\frac{\mu_0I}{\pi a}\arctan \frac{a}{2y}
+$$ 
+
+若P点距薄铜片十分远，$\displaystyle \alpha \to 0\quad \tan \frac{a}{2y}=\frac{a}{2y}$,于是我们有：
+$$
+B \approx \frac{\mu_0I}{\pi a}(\frac{a}{2y})=\frac{\mu_0I}{2\pi y}
+$$
+这一结果与无限长直导线的结果完全相同，因此此时导体板可视为无限长直导线。
+
+\subsection{运动电荷的磁场}
+$$
+\mathrm{d} \boldsymbol{B}=\frac{\mu_0}{4\pi}\frac{I\mathrm{d}\boldsymbol{l}\times \boldsymbol{r}}{r^{3}}
+=\frac{\mu_0}{4\pi}\frac{(nqSv)\mathrm{d}\boldsymbol{l}\times \boldsymbol{r}}{r^{3}}
+$$
+$$
+\boldsymbol{B}=\frac{\mathrm{d}B}{\mathrm{d}N}=\frac{\mathrm{d}B}{nS\mathrm{d}l}
+=\frac{\mu_0}{4\pi}\frac{q \boldsymbol{v}\times \boldsymbol{r}}{r^{3}}
+$$
+
+\section{磁场的高斯定理和安培环路定理}
+\subsection{磁场的高斯定理}
+
+通过任意闭合曲面的磁通量恒等于零。
+$$
+\Phi_{m}=\oint _{s}\boldsymbol{B}\cdot \mathrm{d}\boldsymbol{S}=0
+$$
+说明了磁场的无源性，即不存在磁单极。
+
+\subsection{磁场的安培环路定理}
+
+在稳恒磁场中，磁感应强度 $\boldsymbol{B}$沿任意闭合回路的线积分，等于闭合回路内所包围电流的代数和的 $\mu_0$倍
+\begin{equation}
+  \label{Ampere-circuital-theorem}
+  \oint _{L}\boldsymbol{B}\cdot \mathrm{d} \boldsymbol{l}=\mu_0\sum I_{i}
+\end{equation}
+
+静电场中，场强E的环流为0，说明静电场为势场。而稳恒磁场中，磁感应强度B的环流不为0，说明磁场为非势场，也称为涡旋场，
+不能引入像电势那样的标量函数来描述磁场。
+
+\subsubsection{安培环路定理应用举例}
+
+(1) 无限长载流圆柱体的磁场
+
+当P点在圆柱体外，即 $r>R$ ，则有 $\displaystyle \oint_{L} \boldsymbol{B}\cdot \mathrm{d}\boldsymbol{l}=B\cdot 2\pi r=\mu_0I$
+得：$\displaystyle B=\frac{\mu_0I}{2\pi r}$
+
+当P点在圆柱体内，即 $r<R$ ，则有 $\displaystyle \oint_{l} \boldsymbol{B}\cdot \mathrm{d}\boldsymbol{l}=B\cdot 2p\pi r=\mu_0\frac{r^{2}}{R^{2}}I$
+即：$\displaystyle B=\frac{\mu_0Ir}{2\pi R^{2}}$
+
+(2) 载流螺绕环的磁场
+
+$$
+\oint_{L}\boldsymbol{B}\cdot \mathrm{d}\boldsymbol{l}=B\cdot 2\pi r=\mu_0NI
+$$
+$$
+\Rightarrow B=\frac{\mu_0NI}{2\pi r}
+$$
+
+由上式可知环内不是均匀磁场，但若螺绕环截面积的线度远小于环的平均半径的线度，则上式中r可用平均半径R来替代，故有
+$$
+B=\frac{\mu_0NI}{2\pi R}=\mu_0nI
+$$
+
+(3) 长直载流螺线管的磁场
+
+$$
+\oint_{L}\boldsymbol{B}\cdot \mathrm{d}\boldsymbol{l}=Bl=\mu_0nlI
+$$
+$$
+\Rightarrow B=\mu_0nI
+$$
+
+\section{磁场对电流的作用}
+\subsection{安培力}
+
+$$
+\mathrm{d}\boldsymbol{F}=-\mathrm{d}N\cdot (e \boldsymbol{v} \times \boldsymbol{B})=-nS\mathrm{d}l\cdot (e \boldsymbol{v}\times \boldsymbol{B})
+$$
+$$
+\Rightarrow \mathrm{d}\boldsymbol{F}=I\mathrm{d}\boldsymbol{l}\times \boldsymbol{B}
+$$
+$$
+\Rightarrow \boldsymbol{F}=\int \mathrm{d} \boldsymbol{F}=\int_{0}^{l}I\mathrm{d}\boldsymbol{l}\times \boldsymbol{B}
+$$
+$$
+F=IBl\sin \theta
+$$
+
+\subsection{平行长直载流导线间的作用力}
+
+导线1在导线2处产生的磁感应强度 $B_1=\displaystyle \frac{\mu_0I_1}{2\pi d}$。所以电流元 $I_2\mathrm{d}l_2$所受到的安培力为
+$$
+\mathrm{d}\boldsymbol{F_2}=\frac{\mu_0I_1I_2\mathrm{d}l_2}{2\pi d}
+$$
+每单位长度所受的力为：
+$$
+\frac{\mathrm{d}\boldsymbol{F}_2}{\mathrm{d}\boldsymbol{l}_{2}}=\frac{\mu_0I_1I_2}{2\pi d}
+$$
+同理可得导线1每单位长度所受的力为：
+$$
+\frac{\mathrm{d}\boldsymbol{F}_1}{\mathrm{d}\boldsymbol{l}_{1}}=\frac{\mu_0I_1I_2}{2\pi d}
+$$
+
+在国际单位制中，电流强度是基本量，其单位安培就是同过平行电流间相互作用的安培力来定义的：
+
+{
+  \kaishu
+  真空中相距1m的两条无限长平行指导线，载有相等的稳恒电流，若每条线每米长度上的受力为 $2\times 10^{-7}\mathrm{N}$，则各导线上通过的电流强度定义为1安培（A）。
+}
+
+进一步我们可以知道，$\mu_0=4\pi \times 10^{-7}N/A^{2}$。
+
+\subsection{磁场对平面载流线圈的作用}
+
+借由可绕中心轴转动的刚性矩形线圈在磁场中所受磁力矩的模型，我们可以求得：
+\begin{equation}
+  \label{clj-scalar}
+  M=NBIS\sin \theta
+\end{equation}
+\begin{equation}
+  \label{clj-vector}
+  \boldsymbol{M}=\boldsymbol{p}_{m}\times \boldsymbol{B}
+\end{equation}
+
+\subsection{磁力的功}
+
+$$
+A=I \Delta \Phi\quad A=\int_{\Phi_1}^{\Phi_2}I\mathrm{d}\Phi
+$$
+
+\subsection{带电粒子在电场和磁场中的运动}
+
+\subsubsection{(1) 带电粒子在横向磁场中的圆周运动}
+
+$$
+qvB=m \frac{v^{2}}{r}\Rightarrow R=\frac{mv}{Bq}
+$$
+$$
+T=\frac{2\pi R}{v}=\frac{2\pi m}{Bq}
+$$
+
+\subsubsection{(2) 霍尔效应}
+
+
+\begin{align}
+  qE_H&=qvB \notag\\
+  E_H&=vB\notag\\
+  U_H=&E_H\cdot l=vBl\notag\\
+  U_H&=\frac{I}{nqS}Bl\notag\\
+  U_H&=\frac{1}{nq} \frac{IB}{d}\notag
+\end{align}
+
+
+\begin{equation}
+  \label{Hall-effect}
+  U_{H}=R_{H}\frac{BI}{d}\quad \text{,among which,} R_H=\frac{1}{nq}
+\end{equation}
+
+\section{磁场中的磁介质}
+置于静电场中的电介质由于电极化而激发附加电场，并对原电场产生影响。与此类似，
+置于磁场中的磁介质也会被磁化而激发附加磁场，对原磁场产生影响。
+$$
+\boldsymbol{B}=\boldsymbol{B_0}+\boldsymbol{B}'
+$$
+
+实验表明，附加磁场的方向随磁介质而异，一般情况下分为三类：顺磁质、抗磁质、铁磁质。
+
+\subsubsection{(1) 顺磁质与抗磁质的磁化原理}
+
+电子绕核运动的轨道磁矩为：$\displaystyle \mu=IS=(\nu e)\pi r^{2}=\frac{v}{2\pi r}e \pi r^{2}=\frac{1}{2}evr$
+
+若用电子作轨道运动的角动量 $L=mvr$ 代入上式，则有：$\displaystyle \mu=\frac{e}{2m}L$
+
+考虑矢量式，电子运动方向与电流方向相反：$\boldsymbol{\mu}=\displaystyle -\frac{e}{2m}\boldsymbol{L}$
+
+同样电子的自旋运动也能产生相应的磁效应，自旋磁矩 $\displaystyle \boldsymbol{\mu}_{s}=-\frac{e}{m}\boldsymbol{S}$，其中，
+$\boldsymbol{S}$ 为电子的自旋角动量。
+
+一个分子的磁矩即为分子中各原子内的电子的轨道磁矩与自旋磁矩的矢量和，称为分子的固有磁矩（ {\heiti 分子磁矩}），用 $\boldsymbol{p}_m$表示。
+可认为分子磁矩是由一个等效的圆电流（ {\heiti 分子电流} ）产生的。
+
+当磁介质置于外磁场 $B_0$中，分子中的电子由于受到洛伦兹力，其运动变得复杂，通过角动量旋进的分析可知最终结果是产生一个总是与分子磁矩方向相反的附加磁矩 $\Delta\boldsymbol{p}_m$。
+而在外磁场中，分子磁矩最终总是转向外磁场磁感应强度的方向（但最终取向不可能完全一致）。
+\begin{itemize}
+  \item 在顺磁质中，分子磁矩远大于附加磁矩，宏观上显现出与外磁场方向相同的附加磁场。
+  \item 在抗磁质中，分子中的各磁效应相互抵消，最终使分子固有磁矩为0，故宏观上显现出与外磁场方向相反的附加磁场。
+\end{itemize}
+
+\subsubsection{(2) 磁化强度与磁化电流}
+
+{\heiti 磁化强度}
+
+为了描述磁介质在外磁场中磁化的程度和磁化方向，我们引入一个宏观物理量磁化强度。将磁介质内某点处单位体积内分子总磁矩的矢量和定义为磁化强度。
+即：
+$$
+\boldsymbol{M}=\frac{\sum \boldsymbol{p}_m+\sum\Delta \boldsymbol{p}_m}{\Delta V}
+$$
+在国际单位制中，磁化强度的单位是安/米（A/m）。
+
+{\heiti 磁化电流}
+
+对磁介质内的各分子电流进行叠加，可见内部的分子电流总会成对出现并方向相反，可相互抵消，最终只有磁介质表面的分子电流没有被抵消。故就整体而言，磁化了的磁介质表面存在一个沿介质表面的分子电流，
+称之为{\heiti 分子面电流}，或{\heiti 磁化电流}，又称{\heiti 束缚电流}。
+
+无论顺磁质或抗磁质，磁化电流流向均与磁化强度M成右螺旋关系。
+
+设磁化电流线密度为 $\boldsymbol{j}_m$，则
+$$
+\left| \boldsymbol{M} \right| =\left| \frac{\sum \boldsymbol{p}_m+\sum \Delta \boldsymbol{p}_m}{\Delta V} \right| 
+=\left| \frac{I_m S}{\Delta V}  \right| =\left| \frac{\boldsymbol{j}_m l S}{\Delta V}  \right| =\left| \boldsymbol{j}_m \right| 
+$$
+
+在介质表面类似于安培环路定理作一矩形闭合回路L，进而有：
+$$
+\oint_L \boldsymbol{M}\mathrm{d}\boldsymbol{l}
+=\int_{a}^{b}M\cdot \mathrm{d}l+\int_{b}^{c}M\cdot \mathrm{d}l+\int_{c}^{d}M\cdot \mathrm{d}l+\int_{d}^{a}M\cdot \mathrm{d}l
+=\int_{a}^{b}M\cdot \mathrm{d}l
+=M\cdot ab
+=j_m \cdot ab
+=\sum_{L\text{内部}}I_m
+$$
+
+$$
+\oint_L \boldsymbol{M}\mathrm{d}\boldsymbol{l}=\sum_{L\text{内部}}I_m
+$$
+
+{\kaishu 即磁化强度M沿任意闭合回路的线积分，等于通过该回路所包围面积的磁化电流强度的代数和。}
+
+\subsubsection{(3) 存在磁介质时的磁场的基本规律}
+
+{\heiti 有磁介质时的安培环路定理}
+$$
+\begin{aligned}
+  \oint_L B\cdot \mathrm{d}l&=\mu_0(\sum I_0+\sum I_m)\\
+  \oint_L B\cdot \mathrm{d}l&=\mu_0(\sum I_0+\oint_L M\mathrm{d}l)\\
+  \oint_L (\frac{B}{\mu_0}-&M)\cdot \mathrm{d}l=\sum I_0
+\end{aligned}
+$$
+
+于是我们引入了一个新的物理量，{\heiti 磁场强度}H，令 $\displaystyle H=\frac{B}{\mu_0}-M$。在国际单位制中，磁场强度的单位是安/米（A/m）。则：
+$$
+\oint_L H\mathrm{d}l=\sum I_0
+$$
+
+{\kaishu 即磁场强度H沿任意闭合路径L的环流，等于穿过该路径所包围面积的传导电流的代数和。}
+
+{\heiti 有磁介质时的磁场高斯定理}
+$$
+\oint_S B\cdot \mathrm{d}S=\oint_S (B_0+B')\cdot \mathrm{d}S=0
+$$
+
+{\heiti B、M、H之间的关系}
+$$
+B=\mu_0 M +\mu_0 H 
+$$
+
+实验表明，对各向同性的磁介质，M与H成正比，其比例系数 $\chi_m$称为磁介质的磁化率。
+$$
+M=\chi_m H=(\mu_r-1)H
+$$
+$$
+B=\mu_0(\chi_m+1)H=\mu_0\mu_rH=\mu H
+$$
+
+其中 $\mu_r$称为磁介质的相对磁导率，$\mu$称为磁介质的绝对磁导率。
+存在介质时的磁感应强度为无介质时的磁感应强度的 $\mu_r$倍。即
+$B_r=\mu_rB_0$。
+
+\subsubsection{(4) 铁磁质的磁化规律}
+
+铁磁质在宏观磁性上有三个主要特征：
+\begin{enumerate}
+  \item 具有较高的磁化率
+  \item 磁化强度随外磁场的变化呈非线性和不可逆的变化
+  \item 存在一个临界温度（居里点），在此温度之上铁磁性消失，转化为顺磁性
+\end{enumerate}
+
+{\heiti 铁磁质磁化要点}
+\begin{itemize}
+  \item 起始磁化曲线：逐渐增大H，使B从0变化到饱和磁感应强度；
+  \item 磁滞回线：可简单理解为B随H的变化过程；
+  \item 剩磁：在达到正向饱和状态后逐渐减小H至0，此时的 $B=B_r\neq 0$，称为剩磁；
+  \item 矫顽力：施加反向的H，使得剩磁消失，此时的H对应的值 $H_c$即为矫顽力；
+  \item 磁滞损耗：在交变磁场中的铁磁质被反复磁化，在磁化的过程中会发热消耗能量，即为磁滞损耗
+\end{itemize}
+
+{\heiti 铁磁质的微观结构——磁畴理论}
+
+近代物理理论认为，铁磁质的磁性主要来源于电子的自旋磁矩。
+
+由于相邻原子的电子之间存在着一种特殊的相互作用，称为交换耦合作用，它是一种纯量子效应，能够克服热扰动的影响，
+使得相邻原子磁矩有序排列，取向一致，形成一个个小的“自发磁化区”，即为{\heiti 磁畴}。
+
+在未磁化时，磁畴的自发磁化方向各不相同，使系统处于能量最低的稳定状态。
+就整体而言，各磁畴间的磁矩相互抵消，在宏观上不显磁性。
+
+将铁磁质放在外磁场中磁化，由于磁矩方向与外磁场方向的夹角越大，磁畴的磁能越高，所以磁畴的结构将随磁化过程而发生变化。
+随着外磁场的不断增强，自发磁化方向与外磁场夹角较小的磁畴的体积不断增大，加较大的磁畴的体积不断减小，最终全部消失，达到饱和状态，铁磁质在这一过程中逐渐呈现出宏观的磁性。
+在这一过程中磁畴体积的变化不是连续的，而是外磁场达到一定值时，磁畴的界壁突然发生移动，这反映了磁化过程的不可逆性。
+
+磁畴理论对上述特性的解释：
+\begin{itemize}
+  \item 由于磁介质内的杂质和内应力，使得各磁畴之间存在着某种阻碍磁畴转向的“摩擦”，故当外磁场撤去后，仍有剩磁现象；
+  \item 磁畴在变化过程中需要克服磁畴间的“摩擦”作用而消耗一部分能量，使铁磁质发热，即为磁滞损耗；
+  \item 当温度达到居里点，电子的热运动足以与交换耦合作用相抗衡，磁畴内的有序排列被破坏，磁畴瓦解，失去铁磁性转为顺磁性；
+\end{itemize}
+
+根据矫顽力的大小可将铁磁质分为软磁材料和硬磁材料。其中软磁材料的矫顽力小，易于磁化和去磁。
+硬磁材料的剩磁和矫顽力都很大，适合用于制造永久磁铁。
+
+还有矩磁材料，矫顽力很小，但剩磁接近饱和磁感应强度，使得这种材料总是处于 $+B_s$和 $-B_s$两种状态，可用于在电子计算机中表示0和1。

@@ -1,0 +1,86 @@
+\section{真空中的静电场}
+
+库仑定律：
+$$\displaystyle F=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}
+\text{,其中,}\ \varepsilon_0=8.85\times 10^{-2}\ C^2/(N\cdot m^2)$$
+
+场强公式：
+$$\displaystyle E=\frac{F}{q_0}=\frac{1}{4\pi \varepsilon_0 \cdot \dfrac{q}{r^2}}$$
+
+电偶极矩：
+$$
+p_e=ql
+$$
+
+高斯定理：
+$$
+\oint E \di S = \frac{q}{\varepsilon_0}
+$$
+
+电势：
+$$
+U_p=\int_{p}^{\infty}E\cdot\di l =\int_{r}^{\infty}\frac{q}{4\pi \varepsilon_0 r^2}\di r
+=\frac{q}{4\pi \varepsilon_0 r}
+$$
+
+电势与场强的关系：
+$$
+E=-(\frac{\partial U}{\partial x}\boldsymbol{i}+\frac{\partial U}{\partial y}\boldsymbol{j}+\frac{\partial U}{\partial z}\boldsymbol{k})
+=-grad \ U
+$$
+
+\newpage
+
+\section{静电场中的导体和电介质}
+
+静电屏蔽
+
+电容：
+$$
+C=\frac{Q}{U}
+$$
+$$
+U=Ed=\frac{\sigma d}{\varepsilon_0 }=\frac{qd}{\varepsilon_0S}\Rightarrow C=\frac{\varepsilon_0S}{d}
+$$
+
+静电场中的电介质：
+$$
+E=\frac{u}{d}=\frac{U_0}{\varepsilon_r d}=\frac{E_0}{\varepsilon_r}
+$$
+
+极化强度：
+$$
+\boldsymbol{P}=\varepsilon_0 \chi_e \boldsymbol{E}
+$$
+
+极化电荷面密度：
+$$
+\sigma ' =\left| \boldsymbol{P}\right| \cos \theta=\boldsymbol{P}\cdot \boldsymbol{e_n}
+$$
+$$
+\begin{aligned}
+    \vec{E}=\vec{E_0}+\vec{E'}
+    &\Rightarrow E=E_0-E'=\frac{\sigma_0 }{\varepsilon_0}-\frac{\sigma'}{\varepsilon_0}
+    =E_0-E'=\frac{\sigma_0 }{\varepsilon_0}-\frac{P}{\varepsilon_0}=\frac{\sigma_0}{\varepsilon_0}-\chi_e E \\
+    &\Rightarrow E =\frac{E_0}{1+\chi_e}\quad \text{定义}\quad 1+\chi_e=\varepsilon_r \Rightarrow E=\frac{E_0}{\varepsilon_r}\\
+    &\Rightarrow \frac{\sigma_0-\sigma'}{\varepsilon_0}=\frac{\sigma_0}{\varepsilon_0 \varepsilon_r}=\frac{\sigma_0}{\varepsilon}\\
+    &\Rightarrow \sigma'=(1-\frac{1}{\varepsilon_r})\sigma_0
+\end{aligned}
+$$
+
+电介质中的高斯定理：
+$$
+\oint E\cdot \di S = \frac{1}{\varepsilon_0} (\sum q_0+\sum q')\\
+$$
+$$
+\oint E\cdot \di S = \frac{1}{\varepsilon_0}(\sigma_0\Delta S - \sigma'\Delta S)\\
+$$
+$$
+\oint E\cdot \di S = \frac{\sigma_0\Delta S}{\varepsilon_0} - \frac{1}{\varepsilon_0} \oint P \di S\\
+$$
+$$
+\oint (\varepsilon_0E+P)\di S = \sum q_0\\
+$$
+$$
+\Rightarrow \oint D \di S =\sum q_0
+$$

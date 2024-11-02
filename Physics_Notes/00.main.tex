@@ -1,0 +1,32 @@
+\documentclass[oneside]{ctexbook}
+\usepackage{geometry}
+
+\usepackage{multirow}
+\usepackage{booktabs}  % 绘制三线表
+\usepackage{tabularray} 
+\usepackage{amsmath}
+\usepackage{lmodern}  % 用于消除字体错误
+\usepackage{mathtools}   % 用于输入分支公式 \begin{dcases}
+\usepackage[hidelinks]{hyperref}
+
+\UseTblrLibrary{amsmath}  % 使用tabularray 绘制带分数的矩阵 \begin{+pmatrix}
+
+\newcommand{\di}{\mathrm{d}}
+
+
+\geometry{a4paper, hmargin=2cm, vmargin=3cm}
+
+% 设置行距
+\linespread{1.5}
+\setlength{\parskip}{1em}
+
+
+\begin{document}
+
+\chapter{静电场}
+\include{01.DianXue}
+
+\chapter{稳恒磁场}
+\include{02.CiXue}
+
+\end{document}
